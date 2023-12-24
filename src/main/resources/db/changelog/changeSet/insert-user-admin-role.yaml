@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-user-admin-role
+      author: nodir
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: account_non_locked
+                  value: false
+              - column:
+                  name: email
+                  value: nodir@gmail.com
+              - column:
+                  name: name
+                  value: nodir
+              - column:
+                  name: role
+                  value: ADMIN
+              - column:
+                  name: pass
+                  value: $2a$10$CXUPnQUu9pupoxwSOrkVO.7Jc0pdVZ4ohhOzY0EHYeTuJ1K7bQY9a
+
